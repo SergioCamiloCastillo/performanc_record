@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      appBar:  const AppBarShared(title: 'Registro de supervisión'),
+      appBar: const AppBarShared(title: 'Registro de supervisión'),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -33,10 +33,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 _buildButton(
                   context,
-                  'Registrar Supervisor',
-                  Icons.supervisor_account,
-                  Colors.orange.shade400,
-                  () => context.go('/supervisor'), // Cambiado a GoRouter
+                  'Registrar Rendimiento',
+                  Icons.assessment,
+                  Colors.purple.shade400,
+                  () => context.go('/'), // Cambiado a GoRouter
                 ),
                 _buildButton(
                   context,
@@ -54,10 +54,26 @@ class HomeScreen extends StatelessWidget {
                 ),
                 _buildButton(
                   context,
-                  'Registrar Rendimiento',
-                  Icons.assessment,
-                  Colors.purple.shade400,
-                  () => context.go('/'), // Cambiado a GoRouter
+                  'Histórico de Registro',
+                  Icons.history,
+                  Colors.red.shade400,
+                  () => context.go(
+                      '/historico'), // Cambiado a GoRouter (ajusta la ruta según sea necesario)
+                ),
+                _buildButton(
+                  context,
+                  'Generar Excel',
+                  Icons.file_download,
+                  Colors.teal.shade400,
+                  () => context.go(
+                      '/generar-excel'), // Cambiado a GoRouter (ajusta la ruta según sea necesario)
+                ),
+                _buildButton(
+                  context,
+                  'Registrar Supervisor',
+                  Icons.supervisor_account,
+                  Colors.orange.shade400,
+                  () => context.go('/supervisor'), // Cambiado a GoRouter
                 ),
               ],
             ),
