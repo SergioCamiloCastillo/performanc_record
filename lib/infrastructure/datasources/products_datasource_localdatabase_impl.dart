@@ -3,7 +3,7 @@ import 'package:performance_record/domain/entities/product_entity.dart';
 import 'package:performance_record/infrastructure/helpers/database_helper.dart';
 import 'package:sqflite/sqflite.dart';
 
-class ProductsDatasourceImpl extends ProductsDatasource {
+class ProductsDatasourceLocalDatabaseImpl extends ProductsDatasource {
   final DatabaseHelper _databaseHelper =
       DatabaseHelper(); // Instancia de DatabaseHelper
 
